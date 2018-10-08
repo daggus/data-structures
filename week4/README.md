@@ -60,6 +60,7 @@ For horizontal scaling to work, setting farms of servers side-by-side, you must 
 * Partitiion tolerance
 
 Since ACID isn't easily achievalbe BASE is the fallback position.
+
 **Basic availability**
 Most of the data is available most of the time.
 
