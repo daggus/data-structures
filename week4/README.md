@@ -1,8 +1,8 @@
-#Part 1
+# Part 1
 Pruducing sketches
 I've done bunches of wireframes for client side development but this is my first time producing schematics for database architecture so I've produced two diagrams to facilitate conversation and, hopefullly, tease out different perspectives.'
 
-#Part 2
+# Part 2
 
 Updated credentials with my SQL username
 
@@ -20,21 +20,22 @@ Had issues with my database.
 * Then running week4part2.js wouldn't result in anything
 * Had to create yet another db. My third attempt
 
-#Part 3
+# Part 3
 Copied over credentials from week4part2.js
 Required the node fs module and updated that variable
 Updated var thisQuery to reference the streetAddress, lat and long specified in my JSON file
 
-#Gitelman reading
+# Gitelman reading
 Midwifery of thought 
 Slipbox as assistant
 Evernote, it grows more useful with time  
 Connection to machine learning, virtual assistants and a mapping dialogue
 
-#Hills reading
+# Hills reading
 It's difficult to understand how this applies to the design of an actual database. As has been the case through much of our Hills reading I wish there was a consistent case study to follow.
 
-##ACID
+## ACID
+
 **Atomicity**
 A DBMS transaction that will act as though it's indivisible. Either all affected tables update or the transaction fails.
 
@@ -51,7 +52,8 @@ Once a transaction is complete its results are permanently visible.
 Scalability is an issue.
 
 
-##BASE
+## BASE
+
 For horizontal scaling to work, setting farms of servers side-by-side, you must choose two of the following:
 * Consistency
 * Availability
