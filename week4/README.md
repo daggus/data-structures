@@ -10,8 +10,8 @@ Updated endpoint URL
 db_credentials.host = 'dbrad-database.c3pgqmf4c0fp.us-east-1.rds.amazonaws.com';
 
 Saved password to remote location
-ec2-user:~/environment (master) $ export AWSRDS_PW="kalamazoo05";
-ec2-user:~/environment (master) $ export AWSRDS_PW="kalamazoo05"
+ec2-user:~/environment (master) $ export AWSRDS_PW="*******";
+ec2-user:~/environment (master) $ export AWSRDS_PW="*******"
 ec2-user:~/environment (master) $ printenv | grep AWSRDS_PW
 
 Had issues with my database.
