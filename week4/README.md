@@ -26,10 +26,10 @@ Required the node fs module and updated that variable
 Updated var thisQuery to reference the streetAddress, lat and long specified in my JSON file
 
 # Gitelman reading
-Midwifery of thought 
-Slipbox as assistant
-Evernote, it grows more useful with time  
-Connection to machine learning, virtual assistants and a mapping dialogue
+* Midwifery of thought 
+* Slipbox as assistant
+* Evernote, it grows more useful with time  
+* Connection to machine learning, virtual assistants and a mapping dialogue
 
 # Hills reading
 It's difficult to understand how this applies to the design of an actual database. As has been the case through much of our Hills reading I wish there was a consistent case study to follow.
