@@ -34,6 +34,12 @@ Updated var thisQuery to reference the streetAddress, lat and long specified in 
 # Hills reading
 It's difficult to understand how this applies to the design of an actual database. As has been the case through much of our Hills reading I wish there was a consistent case study to follow.
 
+Horizontal Scaling - The real advantage of NoSQL is horizontal scaling, aka sharding. Considering NoSQL 'documents' are sort of a 'self-contained' object, objects can be on different servers without worrying about joining rows from multiple servers, as is the case with the relational model.
+
+NoSQL server farms are what Facebook and Twitter uses. Flexibility. Consistency over accuracy. 
+
+SQL is NYC. NoSQL is LA. 
+
 ## ACID
 
 **Atomicity**
@@ -51,7 +57,6 @@ Once a transaction is complete its results are permanently visible.
 
 Scalability is an issue.
 
-
 ## BASE
 
 For horizontal scaling to work, setting farms of servers side-by-side, you must choose two of the following:
@@ -68,6 +73,20 @@ Most of the data is available most of the time.
 A commit might not always succeed.
 
 **Eventual consistency**
-Out of sycn copies will eventually catch up.
+Out of sync copies will eventually catch up.
 
 *Is it a hacker strategy to track and exploit consistent positions of transaction failure?*
+
+# Dear Diary
+Ideas:
+* Collecting photograhps of interactions per day along with impressions
+* A random concept generator
+* A surrealist narrative maker
+* Clouds
+* Soundtrack of my life
+
+Look at the primary key in teh sample code and look for other bad data (the phone numbers)
+
+dynamoDB/Tables/ to view database
+
+Put parts 1 and 2 in a single file
