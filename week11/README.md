@@ -1,5 +1,5 @@
 # AA
-** What will the visualization look like? Will it be interactive? If so, how? **
+**What will the visualization look like? Will it be interactive? If so, how?**
 Yes, the concept is that there are selections along the sidebar which allow the user to filter the pinned contents based on location, time, and other details. The categories in the sidebar are expandable. When a pin is selected the sidebar displays details specifc to the selected location and the user can get back to the filter by clicking the close button. 
 
 ** How will the data need to be mapped to the visual elements? **
