@@ -1,4 +1,4 @@
-#AA
+# AA
 ** What will the visualization look like? Will it be interactive? If so, how? **
 Yes, the concept is that there are selections along the sidebar which allow the user to filter the pinned contents based on location, time, and other details. The categories in the sidebar are expandable. When a pin is selected the sidebar displays details specifc to the selected location and the user can get back to the filter by clicking the close button. 
 
@@ -15,7 +15,7 @@ The default view has the sidebar for location opened but no selections have been
 There are a ton of assumptions; the user is looking for a meeting in NYC, the user has already landed on a page with AA branding and other information, the user is visiting in a desktop browser, the user knows their search is anonymous, and more. 
 
 
-#Dear Diary
+# Dear Diary
 ** What will the visualization look like? Will it be interactive? If so, how? **
 Aside from the scrolling web page this isn't interactive.
 
@@ -32,7 +32,7 @@ Like a blog the most recent entry will appear at the top of the vertical stack o
 There are behaviorial assumptions, like that they'll care about the content, but the layout is narrow, stacked and simple to work on both desktop and mobile browswers.
 
 
-#Sensors
+# Sensors
 ** What will the visualization look like? Will it be interactive? If so, how? **
 Currently there's no plan for interaction beyond the scrolling page.
 
