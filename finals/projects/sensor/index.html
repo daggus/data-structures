@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<!-- Adapted from: http://bl.ocks.org/Caged/6476579 -->
+
+<font face="Trebuchet MS"</font>
+
+<h1>My pontentiometer's potential relationship with surrounding technology</h1>
+
+<p>I set up my potentiometer in my living room and planned to adjust the rotating contact in the morning, afternoon and evening based on my level of energy. I quickly realzied the imprecise nature of the sensor and that the assignement would end up being more intepretive because it was difficult to adjust the sensor with precision. Then I left the country for two weeks. When I returned and looked at the sensor data I noticed a spike around 4pm every day that escalates until around 8pm and then tapers off. Why did this happen? Was this an energetic spike related to Con Edison? The relationship between my router, Time Capsule and modem?</p>
+<br>
+<hr>
+
+<style>
+
+body {
+    background-color: #ffffff;
+}
+
+/*
+<h1>Sensor Data,</h1>
+
+<p>My diary was a response to images I documentated in daily life. These were mostly textures from New York City, Berlin and Paris. The project was inspired by a ritual for self reflection that was taught to me by a shaman. For that exercise the participant goes outdoors to find a rock that is roughly the size of their hand. Then, with a partner, the participant examines the rock and describes vocally any images they see in the surface texture. The excercise is about personal reflection and the participant is maeant to free associate about how the imgage make him/her feel and their potential meanings. During the process the partener takes notes of the participants personal reflections. </p>
+<br>
+<hr>*/
+
+body {
+  font: 15px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: blue;
+}
+
+.bar:hover {
+  fill: orangered ;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+</style>
+
+
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script>
+
+var data = [{"sensorhour":0,"avg_value":"1862.4333333333333333"},{"sensorhour":1,"avg_value":"1862.4166666666666667"},{"sensorhour":2,"avg_value":"1862.4500000000000000"},{"sensorhour":3,"avg_value":"1862.5500000000000000"},{"sensorhour":4,"avg_value":"1862.3166666666666667"},{"sensorhour":5,"avg_value":"1862.5500000000000000"},{"sensorhour":6,"avg_value":"1862.3333333333333333"},{"sensorhour":7,"avg_value":"1862.4333333333333333"},{"sensorhour":8,"avg_value":"1862.4333333333333333"},{"sensorhour":9,"avg_value":"1862.5166666666666667"},{"sensorhour":10,"avg_value":"1862.3666666666666667"},{"sensorhour":11,"avg_value":"1862.4666666666666667"},{"sensorhour":12,"avg_value":"1862.4000000000000000"},{"sensorhour":13,"avg_value":"1862.3833333333333333"},{"sensorhour":14,"avg_value":"1862.6610169491525424"},{"sensorhour":15,"avg_value":"1862.4666666666666667"},{"sensorhour":16,"avg_value":"2297.1333333333333333"},{"sensorhour":17,"avg_value":"2297.2666666666666667"},{"sensorhour":18,"avg_value":"2297.1333333333333333"},{"sensorhour":19,"avg_value":"2304.8305084745762712"},{"sensorhour":20,"avg_value":"2409.1041666666666667"},{"sensorhour":21,"avg_value":"2409.3333333333333333"},{"sensorhour":22,"avg_value":"1994.6458333333333333"},{"sensorhour":23,"avg_value":"1862.2833333333333333"}];
+var margin = {top: 40, right: 20, bottom: 30, left: 40},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+var formatAvg = d3.format(".0");
+
+var x = d3.scale.ordinal()
+    .rangeRoundBands([0, width], .1);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left")
+    .tickFormat(formatAvg);
+
+var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return "<strong>Hourly Average:</strong> <span style='color:red'>" + formatAvg(d.avg_value) + "</span>";
+  })
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+svg.call(tip);
+
+  x.domain(data.map(function(d) { return d.sensorhour; }));
+  y.domain([0, d3.max(data, function(d) { return d.avg_value; })]);
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis);
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+    .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("Percentage");
+
+  svg.selectAll(".bar")
+      .data(data)
+    .enter().append("rect")
+      .attr("class", "bar")
+      .attr("x", function(d) { return x(d.sensorhour); })
+      .attr("width", x.rangeBand())
+      .attr("y", function(d) { return y(d.avg_value); })
+      .attr("height", function(d) { return height - y(d.avg_value); })
+      .on('mouseover', tip.show)
+      .on('mouseout', tip.hide)
+
+</script>
