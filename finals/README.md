@@ -5,7 +5,7 @@ This was good as an introduction to AWS, applied Javascript, data scraping, arra
 ### Challenges
 My lack of familiarity with Javascript and programming fundamentals was the single hardest thing about this assignment. This class, actually. It was a challenge not knowing Javascript then that was layered with assignments about designing UI and database structures without understanding the final shape of the assignment. I wasn't prepared for the amount of time I'd have to spend learning the skills that were required but not really taught. 
 
-![screenshot](https://github.com/daggus/data-structures/tree/master/finals/projects/aa/AA01.png)
+https://github.com/daggus/data-structures/tree/master/finals/projects/aa/AA01.png
 
 https://github.com/daggus/data-structures/tree/master/finals/projects/aa/AA02.png
 
