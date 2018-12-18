@@ -5,8 +5,9 @@ This was good as an introduction to AWS, applied Javascript, data scraping, arra
 ### Challenges
 My lack of familiarity with Javascript and programming fundamentals was the single hardest thing about this assignment. This class, actually. It was a challenge not knowing Javascript then that was layered with assignments about designing UI and database structures without understanding the final shape of the assignment. I wasn't prepared for the amount of time I'd have to spend learning the skills that were required but not really taught. 
 
-(https://github.com/daggus/data-structures/tree/master/finals/projects/aa/AA01.png)
-(https://github.com/daggus/data-structures/tree/master/finals/projects/aa/AA02.png)
+![screenshot](https://github.com/daggus/data-structures/tree/master/finals/projects/aa/AA01.png)
+
+https://github.com/daggus/data-structures/tree/master/finals/projects/aa/AA02.png
 
 ### Project notes
 
@@ -50,6 +51,14 @@ Learning how to set up and manage a database and the differences between SQL and
 ### Challenges
 Not knowing much about databases, much of their set up felt arbitrary. I was mostly able to follow the instructions we were given but the underlying reasoning didn't always make sense. Just keeping up with the homwork was enough to occupy my time but I'd like/need to learn more about the connections between various setup decisions. 
 
+https://github.com/daggus/data-structures/tree/master/finals/projects/diary/DearDiary01.png
+
+https://github.com/daggus/data-structures/tree/master/finals/projects/diary/DearDiary02.png
+
+https://github.com/daggus/data-structures/tree/master/finals/projects/diary/DearDiary03.png
+
+
+
 ### Project notes
 Create a database using Dynamo DB. It took me some time to figure out the vocabulary used on AWS is confusing. The assingment, AWS are about created a database but I believe we created an Instance, which can support multiple databases. 
 
@@ -67,6 +76,11 @@ I really enjoyed using the sensors. After so much work outputting data is was re
 
 ### Challenges
 Having no previous experience with the sensors made it difficult to choose one at the beginning of the semester. It would've been helpful to see examples before making the selection. In general, I think more examples would have helped each assignment. Again, it wasn't clear how the actual data visualization would happen. 
+
+https://github.com/daggus/data-structures/tree/master/finals/projects/sensor/Sensor01.png
+
+https://github.com/daggus/data-structures/tree/master/finals/projects/sensor/Sensor01.png
+
 
 ### Project notes
 Set up Particle. This was refreshingly straight forward. I had some issues connecting from home but resolved those easily enough. Turns out it wasn't an issue with the wifi but a loose connection on the board itself. Human error. Always double-check connections. 
